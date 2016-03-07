@@ -56,7 +56,7 @@ class frequencyMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
 			
 			if(substring.length() == 2){
 				context.write(new Text(substring), new IntWritable(1));
-				substring = "";
+				substring = "" + substring.charAt(1);
 			}	
 		}
 	} 
